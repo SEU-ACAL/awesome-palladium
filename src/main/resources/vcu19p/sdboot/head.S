@@ -9,7 +9,7 @@
 _prog_start:
   smp_pause(s1, s2)
   li sp, (PAYLOAD_DEST + 0xffff000)
-  call main
+  # call main
   smp_resume(s1, s2)
   csrr a0, mhartid // hartid for next level bootloader
   la a1, dtb // dtb address for next level bootloader
